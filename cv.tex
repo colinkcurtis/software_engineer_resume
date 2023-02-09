@@ -131,7 +131,7 @@
 
 %Interests/ Keywords/ Summary
 \section{Professional Summary}
-Software engineering is a complex and fast-moving profession where solid communication and team-work is as important as technical skill. My primary skill-set is in back-end systems with a dev-ops mindset.
+Software engineering is a complex and fast-moving profession where solid communication and team-work is as important as technical skill. My focus is in back-end systems with a dev-ops mindset. I am constantly looking for improved processes and effective automations.
 
 
 %----------------------------------------------------------------------------------------
@@ -175,6 +175,7 @@ Interests:  &  \normalsize{Gardening, Cooking, Mountain Biking, Skiing, Running,
 			\item Python 3.10: flask, boto3, sqlalchemy, logging, pytest, alembic, connexion, asyncio, behave, gnupg
 			\item AWS: S3, EC2, ECR, EKR, Step Functions, Lambda, Cognito, Transfer Family, Secrets Manager
 			\item Infrastructure-as-code: Docker, Kubernetes, Terraform
+			\item pair-programming with GPT-3 in the openAI playground
    		\end{itemize}
 
 	\item Responsibilities:
@@ -189,13 +190,13 @@ Interests:  &  \normalsize{Gardening, Cooking, Mountain Biking, Skiing, Running,
 
     	\item Projects and Work Contributed:
 		\begin{itemize}
-    			\item Successfully design and implemented a PGP decryption module to the AWS Step Function/Lambda-based file ingestion system
+    			\item Successfully designed and implemented a PGP decryption module for the file ingestion system (this system was composed of a set of AWS Step Functions kicked off by 				an AWS Lambda driven by a microservice daemon when a client file was received in one of our S3 buckets)
 			\item Designed and implemented versioning of configuration files for transformation of ingested data
 			\item SQL (sqlalchemy) query optimizations
-			\item System testing of APIs and expected workflows using Behavior-Driven-Design (BDD) and the behave library
+			\item System testing of APIs and expected workflows using Behavior Driven Design (Given, When, Then) and the Python 'behave' library
 			\item Application of Linear Algebra principles to database schema design (minimization of necessary dimensions and relationships)
-   			\item Extensive code-review for the work of other engineers with a high acceptance rate for my recommended suggestions/revisions
-    			\item Contributed to Product Design Review (PRD) for engineering/management communication
+   			\item Extensively reviewed code for other engineers with a high acceptance rate for my recommended revisions
+    			\item Contributed to and revised Product Requirement Documents for engineering/management communications
 		\end{itemize}
 
 
@@ -212,22 +213,20 @@ Interests:  &  \normalsize{Gardening, Cooking, Mountain Biking, Skiing, Running,
 
     \item Systems and Tech Stack:
     	\begin{itemize}
-    		\item Micro-services architecture for on-premises-hosted web applications
-		\item Typical layers: Service, Model, Test
+    		\item Micro-services for on-premises-hosted, bespoke tire-design CAD and analysis web application
     		\item Python 3, react.js, numpy, logging, pytest
     	\end{itemize}
 
     \item Projects and Work Contributed
     	\begin{itemize}
-    		\item Designing and building data analysis platforms for engineering clients with specialized data and analysis needs
-    		\item Lead engineer for Ford Dynamometer Dashboard
-    		\item Contributed to Bridgestone Tire CAD system written in Python 3 and React.js
+    		\item Designed and implemented a Dynamometer Dashboard for engine test data analysis at Ford Motors
+    		\item Contributed to Bridgestone tire design CAD/analysis system written in Python 3 and React.js
 		\begin {itemize}
+			\item Microservices architecture hosted using on-premises resources
+			\item Added 'overlays' to the CAD system, allowing tire engineers to view a transparency of one tire design overlaid on to another
+			\item Refactored the automatic Excel report generation - tire engineers click a button in the CAD system and the Python back-end generates a downloadable report
     			\item Converted and upgraded FMAT, a tire image analysis tool, from MATLAB to Python 3 and introduced 'alpha-shapes' computational geometry technique to improve the 				boundary estimates of complex 2-D shapes
-			\item Added 'overlays' to the CAD system, allowing tire engineers to view a transparency of one tire design overlaid on to another in a single view
-			\item Refactored and Enhanced automatic .xls report generation - tire engineers click a button in the CAD system and the Python back-end generates an excel file
 		\end{itemize}
-    		\item Consistent client communications and delivery on schedule were the priorities
     	\end{itemize}
     \end{itemize}
     \end{minipage}
@@ -240,7 +239,7 @@ Interests:  &  \normalsize{Gardening, Cooking, Mountain Biking, Skiing, Running,
 \begin{minipage}[t]{\linewidth}
     \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
     	\item NIH National Center for Advancing Translational Sciences (NCATS) - Biomedical Data Translator Project - Green Team
-    	\item Wrote and maintained Python 3 APIs hosted in-house: Marathon, Mezos, Github, Jenkins, Docker, and nginx
+    	\item Wrote, maintained, and deployed APIs to give access to bioinformatics data hosted in-house using Marathon, Mezos, Github, Jenkins, Docker, and nginx
     	\item Jupyter notebooks used extensively to analyze and share data
     \end{itemize}
     \end{minipage}
@@ -252,9 +251,13 @@ Interests:  &  \normalsize{Gardening, Cooking, Mountain Biking, Skiing, Running,
 \multicolumn{2}{@{}X@{}}{
 \begin{minipage}[t]{\linewidth}
     \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
-    	\item Developed ALAI, a MATLAB application for automating fractal analysis of nanoscopic images
+    	\item Fully designed and developed ALAI, a MATLAB application for automating fractal analysis of nanoscopic images
+	\begin{itemize}
+		\item Reduced user's active analysis time, per image, by a factor of \textasciitilde 50
+		\item Classification of 'fitting zones' (linear v. exponential) by $Adjusted-R^2$ comparison between multiple fitting attempts
+	\end{itemize}
     	\item Primary skills: equipment building, data capture, data analysis, and mathematical modeling
-    	\item Subject-matter expertise: carbon nano-structures, inter-facial friction
+    	\item Subject-matter expertise: carbon nano-structures, inter-facial friction at the atomic scale
     \end{itemize}
     \end{minipage}
 }
@@ -272,23 +275,6 @@ Interests:  &  \normalsize{Gardening, Cooking, Mountain Biking, Skiing, Running,
     \end{minipage}
 }
 \end{tabularx}
-
-%Projects
-\section{Independent Coding Projects}
-
-\begin{tabularx}{\linewidth}{ @{}l r@{} }
-\textbf{Adaptive Learning Analysis for Images (ALAI)} \\
-\multicolumn{2}{@{}X@{}}{
-\begin{minipage}[t]{\linewidth}
-    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
-    \item Reduced user's active analysis time, per image, by a factor of \textasciitilde 50
-    \item An image analysis app in MATLAB using categorization and regression fitting techniques
-    \item Classification of 'fitting zones' (linear v. exponential) by $Adjusted-R^2$ comparison between multiple fitting attempts
-    \end{itemize}
-    \end{minipage}
-
-}\end{tabularx}
-
 
 
 %----------------------------------------------------------------------------------------
