@@ -97,13 +97,14 @@
 %debug page outer frames
 %\usepackage{showframe}
 
+
 %----------------------------------------------------------------------------------------
 %	BEGIN DOCUMENT
 %----------------------------------------------------------------------------------------
 \begin{document}
 
 % non-numbered pages
-\pagestyle{empty} 
+\pagestyle{empty}
 
 %----------------------------------------------------------------------------------------
 %	TITLE
@@ -116,12 +117,12 @@
 % \end{tabularx}
 
 \begin{tabularx}{\linewidth}{@{} C @{}}
-\Huge{Your Name} \\[7.5pt]
-\href{https://github.com/username}{\raisebox{-0.05\height}\faGithub\ username} \ $|$ \ 
-\href{https://linkedin.com/in/username}{\raisebox{-0.05\height}\faLinkedin\ username} \ $|$ \ 
-\href{https://mysite.com}{\raisebox{-0.05\height}\faGlobe \ mysite.com} \ $|$ \ 
-\href{mailto:email@mysite.com}{\raisebox{-0.05\height}\faEnvelope \ email@mysite.com} \ $|$ \ 
-\href{tel:+000000000000}{\raisebox{-0.05\height}\faMobile \ +00.00.000.000} \\
+\Huge{Colin Curtis} \\[7.5pt]
+\href{https://github.com/colinkcurtis}{\raisebox{-0.05\height}\faGithub\ colinkcurtis} \ $|$ \
+\href{https://gitlab.com/colinkcurtis}{\raisebox{-0.05\height}\faGitlab\ colinkcurtis} \ $|$ \
+\href{https://www.linkedin.com/in/colinkcurtis/}{\raisebox{-0.05\height}\faLinkedin\ Colin Curtis} \ $|$ \
+\href{mailto:colinkcurtis@gmail.com}{\raisebox{-0.05\height}\faEnvelope \ colinkcurtis@gmail.com} \ $|$ \
+\href{919-525-7837}{\raisebox{-0.05\height}\faMobile \ 919-525-7837} \\
 \end{tabularx}
 
 %----------------------------------------------------------------------------------------
@@ -129,15 +130,75 @@
 %----------------------------------------------------------------------------------------
 
 %Interests/ Keywords/ Summary
-\section{Summary}
-This CV is automatically generated and deployed using the \href{https://github.com/jitinnair1/autoCV}{autoCV} template along with GitHub Actions such that a new version of the CV is compiled, published and ready for use when the cv.tex file is updated. For details, \href{https://github.com/jitinnair1/autoCV}{click here}.
+\section{Professional Summary}
+Software engineering is a complex and fast-moving profession where solid communication and team-work is as important as technical skill. My primary skill-set is in back-end systems with a dev-ops mindset.
 
 %Experience
 \section{Work Experience}
 
 \begin{tabularx}{\linewidth}{ @{}l r@{} }
-\textbf{Designation} & \hfill Jan 2021 - present \\[3.75pt]
-\multicolumn{2}{@{}X@{}}{long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width}  \\
+\textbf{Senior Software Engineer - Garner Health} & \hfill August 2022 - February 2023 \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+
+        \item Systems and Tech Stack:
+        		\begin{itemize}
+        			\item Event-driven, micro-services architecture, RESTful (OpenAPI spec), cloud-native
+        			\item Typical Layers: API, Daemon, Service, Model, Test
+			\item Python 3.10: flask, boto3, sqlalchemy, logging, pytest, alembic, connexion, asyncio, behave, gnupg
+			\item AWS: S3, EC2, ECR, EKR, Step Functions, Lambda, Cognito, Transfer Family, Secrets Manager
+			\item Infrastructure-as-code: Docker, Kubernetes, Terraform
+   		\end{itemize}
+
+	\item Responsibilities:
+		\begin{itemize}
+		    	\item Writing code for new features and bug fixes
+			\item Requirements gathering, feature planning, and project scheduling
+    			\item Code review
+			\item System design
+    			\item Dev-ops for the cloud-native system
+    			\item Support/on-call rotations
+		\end{itemize}
+
+    	\item Projects and Work Contributed:
+		\begin{itemize}
+    			\item Successfully design and implemented a PGP decryption module to the AWS Step Function/Lambda-based file ingestion system
+			\item Designed and implemented versioning of configuration files for transformation of ingested data
+   			\item Extensive code-review for the work of other engineers with a high acceptance rate for my recommended suggestions/revisions
+    			\item Contributed to Product Design Review (PRD) for engineering/management communication
+		\end{itemize}
+
+
+    \end{itemize}
+    \end{minipage}
+}
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Software Engineer - Actalent Services} & \hfill April 2019 - August 2022 \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+
+    \item Systems and Tech Stack:
+    \begin{itemize}
+    	\item Micro-services architecture for on-premises-hosted web applications
+	\item Typical layers: Service, Model, Test
+    	\item Python 3, react.js, numpy, logging, pytest
+    \end{itemize}
+
+    \item Projects and Work Contributed
+    	\begin{itemize}
+    		\item Designing and building data analysis platforms for engineering clients with specialized data and analysis needs
+    		\item Lead engineer for Ford Dynamometer Dashboard
+    		\item Previously contributed to Bridgestone Tire CAD system written in Python 3 and React.js
+    		\item Converted and upgraded FMAT, a tire image analysis tool, from MATLAB to Python 3 and introduced 'alpha-shapes' computational geometry technique to improve the boundary estimates of complex 2-D shapes
+    		\item Consistent client communications and delivery on schedule are the priorities
+    	\end{itemize}
+    \end{itemize}
+    \end{minipage}
+}
 \end{tabularx}
 
 \begin{tabularx}{\linewidth}{ @{}l r@{} }
@@ -146,7 +207,7 @@ This CV is automatically generated and deployed using the \href{https://github.c
 \begin{minipage}[t]{\linewidth}
     \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
         \item[--] long long line of blah blah that will wrap when the table fills the column width
-        \item[--] again, long long line of blah blah that will wrap when the table fills the column width but this time even more long long line of blah blah. again, long long line of blah blah that will wrap when the table fills the column width but this time even more long long line of blah blah
+        \item[--] again, long long line of blah blah that will wrap when the table fills the column width but this time even more long long line of blah blah. again, long long line of blah blah that will 	wrap when the table fills the column width but this time even more long long line of blah blah
     \end{itemize}
     \end{minipage}
 }
@@ -164,10 +225,10 @@ This CV is automatically generated and deployed using the \href{https://github.c
 %	EDUCATION
 %----------------------------------------------------------------------------------------
 \section{Education}
-\begin{tabularx}{\linewidth}{@{}l X@{}}	
+\begin{tabularx}{\linewidth}{@{}l X@{}}
 2030 - present & PhD (Subject) at \textbf{University} \hfill \normalsize (GPA: 4.0/4.0) \\
 
-2023 - 2027 & Bachelor's Degree at \textbf{College} \hfill (GPA: 4.0/4.0) \\ 
+2023 - 2027 & Bachelor's Degree at \textbf{College} \hfill (GPA: 4.0/4.0) \\
 
 2022 & Class 12th Some Board \hfill  (Grades) \\
 
@@ -189,7 +250,7 @@ This CV is automatically generated and deployed using the \href{https://github.c
 \section{Skills}
 \begin{tabularx}{\linewidth}{@{}l X@{}}
 Some Skills &  \normalsize{This, That, Some of this and that etc.}\\
-Some More Skills  &  \normalsize{Also some more of this, Some more that, And some of this and that etc.}\\  
+Some More Skills  &  \normalsize{Also some more of this, Some more that, And some of this and that etc.}\\
 \end{tabularx}
 
 \vfill
