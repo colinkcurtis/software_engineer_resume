@@ -1,0 +1,302 @@
+%-----------------------------------------------------------------------------------------------------------------------------------------------%
+%	The MIT License (MIT)
+%
+%	Copyright (c) 2021 Jitin Nair
+%
+%	Permission is hereby granted, free of charge, to any person obtaining a copy
+%	of this software and associated documentation files (the "Software"), to deal
+%	in the Software without restriction, including without limitation the rights
+%	to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+%	copies of the Software, and to permit persons to whom the Software is
+%	furnished to do so, subject to the following conditions:
+%	
+%	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+%	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+%	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+%	AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+%	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+%	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+%	THE SOFTWARE.
+%	
+%
+%-----------------------------------------------------------------------------------------------------------------------------------------------%
+
+%----------------------------------------------------------------------------------------
+%	DOCUMENT DEFINITION
+%----------------------------------------------------------------------------------------
+
+% article class because we want to fully customize the page and not use a cv template
+\documentclass[a4paper,12pt]{article}
+
+%----------------------------------------------------------------------------------------
+%	FONT
+%----------------------------------------------------------------------------------------
+
+% % fontspec allows you to use TTF/OTF fonts directly
+% \usepackage{fontspec}
+% \defaultfontfeatures{Ligatures=TeX}
+
+% % modified for ShareLaTeX use
+% \setmainfont[
+% SmallCapsFont = Fontin-SmallCaps.otf,
+% BoldFont = Fontin-Bold.otf,
+% ItalicFont = Fontin-Italic.otf
+% ]
+% {Fontin.otf}
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES
+%----------------------------------------------------------------------------------------
+\usepackage{url}
+\usepackage{parskip} 	
+
+%other packages for formatting
+\RequirePackage{color}
+\RequirePackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[scale=0.9]{geometry}
+
+%tabularx environment
+\usepackage{tabularx}
+
+%for lists within experience section
+\usepackage{enumitem}
+
+% centered version of 'X' col. type
+\newcolumntype{C}{>{\centering\arraybackslash}X} 
+
+%to prevent spillover of tabular into next pages
+\usepackage{supertabular}
+\usepackage{tabularx}
+\newlength{\fullcollw}
+\setlength{\fullcollw}{0.47\textwidth}
+
+%custom \section
+\usepackage{titlesec}				
+\usepackage{multicol}
+\usepackage{multirow}
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{10pt}{10pt}
+
+%for publications
+\usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
+
+%Setup hyperref package, and colours for links
+\usepackage[unicode, draft=false]{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
+\addbibresource{citations.bib}
+\setlength\bibitemsep{1em}
+
+%for social icons
+\usepackage{fontawesome5}
+
+%debug page outer frames
+%\usepackage{showframe}
+
+
+%----------------------------------------------------------------------------------------
+%	BEGIN DOCUMENT
+%----------------------------------------------------------------------------------------
+\begin{document}
+
+% non-numbered pages
+\pagestyle{empty}
+
+%----------------------------------------------------------------------------------------
+%	TITLE
+%----------------------------------------------------------------------------------------
+
+% \begin{tabularx}{\linewidth}{ @{}X X@{} }
+% \huge{Your Name}\vspace{2pt} & \hfill \emoji{incoming-envelope} email@email.com \\
+% \raisebox{-0.05\height}\faGithub\ username \ | \
+% \raisebox{-0.00\height}\faLinkedin\ username \ | \ \raisebox{-0.05\height}\faGlobe \ mysite.com  & \hfill \emoji{calling} number
+% \end{tabularx}
+
+\begin{tabularx}{\linewidth}{@{} C @{}}
+\Huge{Colin Curtis} \\[7.5pt]
+\href{https://github.com/colinkcurtis}{\raisebox{-0.05\height}\faGithub\ colinkcurtis} \ $|$ \
+\href{https://gitlab.com/colinkcurtis}{\raisebox{-0.05\height}\faGitlab\ colinkcurtis} \ $|$ \
+\href{https://www.linkedin.com/in/colinkcurtis/}{\raisebox{-0.05\height}\faLinkedin\ Colin Curtis} \ $|$ \
+\href{mailto:colinkcurtis@gmail.com}{\raisebox{-0.05\height}\faEnvelope \ colinkcurtis@gmail.com} \ $|$ \
+\href{919-525-7837}{\raisebox{-0.05\height}\faMobile \ 919-525-7837} \\
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+% SUMMARY
+%----------------------------------------------------------------------------------------
+
+%Interests/ Keywords/ Summary
+\section{Professional Summary}
+Software engineering is a complex and fast-moving profession where solid communication and team-work is as important as technical skill. My focus is in back-end systems with a dev-ops mindset. I am constantly looking for improved processes and effective automations.
+
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+\section{Education}
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+2012 - 2014 M.S. (Physics) at \textbf{North Carolina State University} \hfill \normalsize \\
+2007 - 2012 B.S. (Physics w/ Math Minor) at \textbf{Appalachian State University} \hfill
+
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%	OTHER SKILLS & INTERESTS
+%----------------------------------------------------------------------------------------
+\section{Skills}
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+Other Skills: &  \normalsize{Linear Algebra, Calculus, Statistical Mechanics, Error/Uncertainty Analysis, Fractal Geo.}\\
+Interests:  &  \normalsize{Gardening, Cooking, Mountain Biking, Skiing, Running, Sci-fi, History}\\
+\end{tabularx}
+
+
+%----------------------------------------------------------------------------------------
+% WORK EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+
+%Experience
+\section{Work Experience}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Senior Software Engineer - Garner Health} & \hfill August 2022 - February 2023 \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+
+        \item Systems and Tech Stack:
+        		\begin{itemize}
+        			\item Event-driven, micro-services architecture, RESTful (OpenAPI spec), cloud-native
+        			\item Typical Layers: API, Daemon, Service, Model, Test
+			\item Python 3.10: flask, boto3, sqlalchemy, logging, pytest, alembic, connexion, asyncio, behave, gnupg
+			\item AWS: S3, EC2, ECR, EKR, Step Functions, Lambda, Cognito, Transfer Family, Secrets Manager
+			\item Infrastructure-as-code: Docker, Kubernetes, Terraform
+			\item pair-programming with GPT-3 in the openAI playground
+   		\end{itemize}
+
+	\item Responsibilities:
+		\begin{itemize}
+		    	\item Writing code for new features and bug fixes
+			\item Requirements gathering, feature planning, and project scheduling
+    			\item Code review
+			\item System design
+    			\item Dev-ops for the cloud-native system
+    			\item Support/on-call rotations
+		\end{itemize}
+
+    	\item Projects and Work Contributed:
+		\begin{itemize}
+    			\item Successfully designed and implemented a PGP decryption module for the file ingestion system (this system was composed of a set of AWS Step Functions kicked off by 				an AWS Lambda driven by a microservice daemon when a client file was received in one of our S3 buckets)
+			\item Designed and implemented versioning of configuration files for transformation of ingested data
+			\item SQL (sqlalchemy) query optimizations
+			\item System testing of APIs and expected workflows using Behavior Driven Design (Given, When, Then) and the Python 'behave' library
+			\item Application of Linear Algebra principles to database schema design (minimization of necessary dimensions and relationships)
+   			\item Extensively reviewed code for other engineers with a high acceptance rate for my recommended revisions
+    			\item Contributed to and revised Product Requirement Documents for engineering/management communications
+		\end{itemize}
+
+
+    \end{itemize}
+    \end{minipage}
+}
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Software Engineer - Actalent Services} & \hfill April 2019 - August 2022 \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+
+    \item Systems and Tech Stack:
+    	\begin{itemize}
+    		\item Micro-services for on-premises-hosted, bespoke tire-design CAD and analysis web application
+    		\item Python 3, react.js, numpy, logging, pytest
+    	\end{itemize}
+
+    \item Projects and Work Contributed
+    	\begin{itemize}
+    		\item Designed and implemented a Dynamometer Dashboard for engine test data analysis at Ford Motors
+    		\item Contributed to Bridgestone tire design CAD/analysis system written in Python 3 and React.js
+		\begin {itemize}
+			\item Microservices architecture hosted using on-premises resources
+			\item Added 'overlays' to the CAD system, allowing tire engineers to view a transparency of one tire design overlaid on to another
+			\item Refactored the automatic Excel report generation - tire engineers click a button in the CAD system and the Python back-end generates a downloadable report
+    			\item Converted and upgraded FMAT, a tire image analysis tool, from MATLAB to Python 3 and introduced 'alpha-shapes' computational geometry technique to improve the 				boundary estimates of complex 2-D shapes
+		\end{itemize}
+    	\end{itemize}
+    \end{itemize}
+    \end{minipage}
+}
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Research Software Engineer - RENCI @ UNC - CH} & \hfill June 2018 - March 2019 \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+    	\item NIH National Center for Advancing Translational Sciences (NCATS) - Biomedical Data Translator Project - Green Team
+    	\item Wrote, maintained, and deployed APIs to give access to bioinformatics data hosted in-house using Marathon, Mezos, Github, Jenkins, Docker, and nginx
+    	\item Jupyter notebooks used extensively to analyze and share data
+    \end{itemize}
+    \end{minipage}
+}
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Research Assistant, Krim Group} & \hfill January 2015 - April 2018 \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+    	\item Fully designed and developed ALAI, a MATLAB application for automating fractal analysis of nanoscopic images
+	\begin{itemize}
+		\item Reduced user's active analysis time, per image, by a factor of \textasciitilde 50
+		\item Classification of 'fitting zones' (linear v. exponential) by $Adjusted-R^2$ comparison between multiple fitting attempts
+	\end{itemize}
+    	\item Primary skills: equipment building, data capture, data analysis, and mathematical modeling
+    	\item Subject-matter expertise: carbon nano-structures, inter-facial friction at the atomic scale
+    \end{itemize}
+    \end{minipage}
+}
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Research Assistant, Clarke Group} & \hfill January 2015 - April 2018 \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+    	\item Research focus: Polymers, LASER for spectroscopy and photothermal heating, nanoparticle synthesis
+    	\item Utilized ANSYS Maxwell mesh-calculation to simulate 3-D electro-magnetic fields
+    	\item Used and maintained LabVIEW software systems for instrument control and data collection
+    \end{itemize}
+    \end{minipage}
+}
+\end{tabularx}
+
+
+%----------------------------------------------------------------------------------------
+%	PUBLICATIONS
+%----------------------------------------------------------------------------------------
+\section{Publications}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\multicolumn{2}{@{}X@{}}{
+\begin{minipage}[t]{\linewidth}
+    	\begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+
+    		\item First Author, \textit{A Comparative Study of the Nanoscale and Macroscale Attributes... of Nanodiamonds}, Beilstein Journal of Nanotechnology, Sep 2017 (PDF available 			here: https://www.beilstein-journals.org/bjnano/content/pdf/2190-4286-8-205.pdf)
+    		\item Second Author, \textit{Unconfined, melt edge electrospinning from multiple, spontaneous, self-organized polymer jets}, Materials Research Express, 28 Nov 2014 (Vol. 1, 			Num. 4)
+		\item Third Author, \textit{A Tribological Study of $\gamma$-Fe$_{2}O_{3}$ Nanoparticles in Aqueous Suspension}, Tribology Letters, Dec 2018 (66:130)
+	\end{itemize}
+\end{minipage}
+
+}\end{tabularx}
+
+
+
+\vfill
+\center{\footnotesize Last updated: \today}
+
+\end{document}
