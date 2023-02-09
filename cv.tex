@@ -126,12 +126,38 @@
 \end{tabularx}
 
 %----------------------------------------------------------------------------------------
-% EXPERIENCE SECTIONS
+% SUMMARY
 %----------------------------------------------------------------------------------------
 
 %Interests/ Keywords/ Summary
 \section{Professional Summary}
 Software engineering is a complex and fast-moving profession where solid communication and team-work is as important as technical skill. My primary skill-set is in back-end systems with a dev-ops mindset.
+
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+\section{Education}
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+2012 - 2014 M.S. (Physics) at \textbf{North Carolina State University} \hfill \normalsize \\
+2007 - 2012 B.S. (Physics w/ Math Minor) at \textbf{Appalachian State University} \hfill
+
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%	OTHER SKILLS & INTERESTS
+%----------------------------------------------------------------------------------------
+\section{Skills}
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+Other Skills: &  \normalsize{Linear Algebra, Calculus, Statistical Mechanics, Error/Uncertainty Analysis, Fractal Geo.}\\
+Interests:  &  \normalsize{Gardening, Cooking, Mountain Biking, Skiing, Running, Sci-fi, History}\\
+\end{tabularx}
+
+
+%----------------------------------------------------------------------------------------
+% WORK EXPERIENCE
+%----------------------------------------------------------------------------------------
+
 
 %Experience
 \section{Work Experience}
@@ -165,6 +191,9 @@ Software engineering is a complex and fast-moving profession where solid communi
 		\begin{itemize}
     			\item Successfully design and implemented a PGP decryption module to the AWS Step Function/Lambda-based file ingestion system
 			\item Designed and implemented versioning of configuration files for transformation of ingested data
+			\item SQL (sqlalchemy) query optimizations
+			\item System testing of APIs and expected workflows using Behavior-Driven-Design (BDD) and the behave library
+			\item Application of Linear Algebra principles to database schema design (minimization of necessary dimensions and relationships)
    			\item Extensive code-review for the work of other engineers with a high acceptance rate for my recommended suggestions/revisions
     			\item Contributed to Product Design Review (PRD) for engineering/management communication
 		\end{itemize}
@@ -182,19 +211,23 @@ Software engineering is a complex and fast-moving profession where solid communi
     \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
 
     \item Systems and Tech Stack:
-    \begin{itemize}
-    	\item Micro-services architecture for on-premises-hosted web applications
-	\item Typical layers: Service, Model, Test
-    	\item Python 3, react.js, numpy, logging, pytest
-    \end{itemize}
+    	\begin{itemize}
+    		\item Micro-services architecture for on-premises-hosted web applications
+		\item Typical layers: Service, Model, Test
+    		\item Python 3, react.js, numpy, logging, pytest
+    	\end{itemize}
 
     \item Projects and Work Contributed
     	\begin{itemize}
     		\item Designing and building data analysis platforms for engineering clients with specialized data and analysis needs
     		\item Lead engineer for Ford Dynamometer Dashboard
-    		\item Previously contributed to Bridgestone Tire CAD system written in Python 3 and React.js
-    		\item Converted and upgraded FMAT, a tire image analysis tool, from MATLAB to Python 3 and introduced 'alpha-shapes' computational geometry technique to improve the boundary estimates of complex 2-D shapes
-    		\item Consistent client communications and delivery on schedule are the priorities
+    		\item Contributed to Bridgestone Tire CAD system written in Python 3 and React.js
+		\begin {itemize}
+    			\item Converted and upgraded FMAT, a tire image analysis tool, from MATLAB to Python 3 and introduced 'alpha-shapes' computational geometry technique to improve the 				boundary estimates of complex 2-D shapes
+			\item Added 'overlays' to the CAD system, allowing tire engineers to view a transparency of one tire design overlaid on to another in a single view
+			\item Refactored and Enhanced automatic .xls report generation - tire engineers click a button in the CAD system and the Python back-end generates an excel file
+		\end{itemize}
+    		\item Consistent client communications and delivery on schedule were the priorities
     	\end{itemize}
     \end{itemize}
     \end{minipage}
@@ -202,56 +235,80 @@ Software engineering is a complex and fast-moving profession where solid communi
 \end{tabularx}
 
 \begin{tabularx}{\linewidth}{ @{}l r@{} }
-\textbf{Designation} & \hfill Mar 2019 - Jan 2021 \\[3.75pt]
+\textbf{Research Software Engineer - RENCI @ UNC - CH} & \hfill June 2018 - March 2019 \\[3.75pt]
 \multicolumn{2}{@{}X@{}}{
 \begin{minipage}[t]{\linewidth}
     \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
-        \item[--] long long line of blah blah that will wrap when the table fills the column width
-        \item[--] again, long long line of blah blah that will wrap when the table fills the column width but this time even more long long line of blah blah. again, long long line of blah blah that will 	wrap when the table fills the column width but this time even more long long line of blah blah
+    	\item NIH National Center for Advancing Translational Sciences (NCATS) - Biomedical Data Translator Project - Green Team
+    	\item Wrote and maintained Python 3 APIs hosted in-house: Marathon, Mezos, Github, Jenkins, Docker, and nginx
+    	\item Jupyter notebooks used extensively to analyze and share data
+    \end{itemize}
+    \end{minipage}
+}
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Research Assistant, Krim Group} & \hfill January 2015 - April 2018 \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+    	\item Developed ALAI, a MATLAB application for automating fractal analysis of nanoscopic images
+    	\item Primary skills: equipment building, data capture, data analysis, and mathematical modeling
+    	\item Subject-matter expertise: carbon nano-structures, inter-facial friction
+    \end{itemize}
+    \end{minipage}
+}
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Research Assistant, Clarke Group} & \hfill January 2015 - April 2018 \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+    	\item Research focus: Polymers, LASER for spectroscopy and photothermal heating, nanoparticle synthesis
+    	\item Utilized ANSYS Maxwell mesh-calculation to simulate 3-D electro-magnetic fields
+    	\item Used and maintained LabVIEW software systems for instrument control and data collection
     \end{itemize}
     \end{minipage}
 }
 \end{tabularx}
 
 %Projects
-\section{Projects}
+\section{Independent Coding Projects}
 
 \begin{tabularx}{\linewidth}{ @{}l r@{} }
-\textbf{Some Project} & \hfill \href{https://some-link.com}{Link to Demo} \\[3.75pt]
-\multicolumn{2}{@{}X@{}}{long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width}  \\
-\end{tabularx}
+\textbf{Adaptive Learning Analysis for Images (ALAI)} \\
+\multicolumn{2}{@{}X@{}}{
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+    \item Reduced user's active analysis time, per image, by a factor of \textasciitilde 50
+    \item An image analysis app in MATLAB using categorization and regression fitting techniques
+    \item Classification of 'fitting zones' (linear v. exponential) by $Adjusted-R^2$ comparison between multiple fitting attempts
+    \end{itemize}
+    \end{minipage}
 
-%----------------------------------------------------------------------------------------
-%	EDUCATION
-%----------------------------------------------------------------------------------------
-\section{Education}
-\begin{tabularx}{\linewidth}{@{}l X@{}}
-2030 - present & PhD (Subject) at \textbf{University} \hfill \normalsize (GPA: 4.0/4.0) \\
+}\end{tabularx}
 
-2023 - 2027 & Bachelor's Degree at \textbf{College} \hfill (GPA: 4.0/4.0) \\
 
-2022 & Class 12th Some Board \hfill  (Grades) \\
-
-2021 & Class 10th Some Board \hfill  (Grades) \\
-\end{tabularx}
 
 %----------------------------------------------------------------------------------------
 %	PUBLICATIONS
 %----------------------------------------------------------------------------------------
 \section{Publications}
-\begin{refsection}[citations.bib]
-\nocite{*}
-\printbibliography[heading=none]
-\end{refsection}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\multicolumn{2}{@{}X@{}}{
+\begin{minipage}[t]{\linewidth}
+    	\begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
 
-%----------------------------------------------------------------------------------------
-%	SKILLS
-%----------------------------------------------------------------------------------------
-\section{Skills}
-\begin{tabularx}{\linewidth}{@{}l X@{}}
-Some Skills &  \normalsize{This, That, Some of this and that etc.}\\
-Some More Skills  &  \normalsize{Also some more of this, Some more that, And some of this and that etc.}\\
-\end{tabularx}
+    		\item First Author, \textit{A Comparative Study of the Nanoscale and Macroscale Attributes... of Nanodiamonds}, Beilstein Journal of Nanotechnology, Sep 2017 (PDF available 			here: https://www.beilstein-journals.org/bjnano/content/pdf/2190-4286-8-205.pdf)
+    		\item Second Author, \textit{Unconfined, melt edge electrospinning from multiple, spontaneous, self-organized polymer jets}, Materials Research Express, 28 Nov 2014 (Vol. 1, 			Num. 4)
+		\item Third Author, \textit{A Tribological Study of $\gamma$-Fe$_{2}O_{3}$ Nanoparticles in Aqueous Suspension}, Tribology Letters, Dec 2018 (66:130)
+	\end{itemize}
+\end{minipage}
+
+}\end{tabularx}
+
+
 
 \vfill
 \center{\footnotesize Last updated: \today}
