@@ -131,7 +131,9 @@
 
 %Interests/ Keywords/ Summary
 \section{Professional Summary}
-Software engineering is a complex and fast-moving profession where clear communication and team-work is as important as technical skill. My focus is in back-end, data-intensive systems with a dev-ops mindset. I am constantly looking for improved processes and effective automations. The goal is effective software with clean architecture which sticks to SOLID and related design principles.
+Software engineering is a complex and fast-moving profession where clear communication and team-work is as important as technical skill. My focus is in back-end, data-intensive systems with a dev-ops mindset. I am constantly looking for improved processes and effective automations.
+
+Delivering great customer experience and value is the goal, and effective software with clean architecture which sticks to SOLID design principles is the vehicle for achieving that goal.
 
 
 %----------------------------------------------------------------------------------------
@@ -170,10 +172,10 @@ Interests:  &  \normalsize{Gardening, Cooking, Mountain Biking, Skiing, Running,
 
         \item Systems and Tech Stack:
         		\begin{itemize}
-        			\item Event-driven, micro-services architecture, RESTful (OpenAPI spec), cloud-native
-        			\item Typical Layers: API, Daemon, Service, Model (db = RDS postgres), Test
+        			\item Cloud-native, event-driven, microservices architecture
+        			\item Typical Layers: API, Daemon, Service, Model, Test
 			\item Python 3.11: connexion/flask, psycopg2, sqlalchemy, boto3, pytest, alembic, asyncio, behave
-			\item AWS: S3, EC2, ECR, EKR, Step Functions, Lambda, Cognito, Transfer Family, Secrets Manager
+			\item AWS: S3, RDS (postgres) ECR, EKR, Step Functions, Lambda, Transfer Family, Secrets Manager
 			\item Infrastructure-as-code: Docker, Kubernetes, Terraform
 			\item pair-programming with GPT-3 in the openAI playground
    		\end{itemize}
@@ -193,10 +195,10 @@ Interests:  &  \normalsize{Gardening, Cooking, Mountain Biking, Skiing, Running,
     			\item PGP decryption module for the file ingestion system (AWS Step Functions kicked off by a Lambda fcn embedded in a microservices daemon which watched our S3 buckets)
 			\item Designed/implemented Client Data Configuration Versioning for transformation of ingested data
 			\item SQL (sqlalchemy) query optimizations
-			\item System testing of APIs and expected workflows using Behavior Driven Design (Given, When, Then) and the Python 'behave' library
-			\item Application of Linear Algebra principles to database schema design (minimization of necessary dimensions and relationships)
-   			\item Extensively reviewed code for other engineers with a high acceptance rate for my recommended revisions
-    			\item Contributed to and revised Product Requirement Documents for engineering/management communications
+			\item System testing of RESTful APIs using Behavior Driven Design (behave library) 
+			\item Application of Linear Algebra principles to database design
+   			\item Extensively reviewed code for other engineers with a high acceptance rate for my revisions
+    			\item Contributed to Product Requirement Documents for engineering/management communications
 		\end{itemize}
 
 
@@ -213,16 +215,15 @@ Interests:  &  \normalsize{Gardening, Cooking, Mountain Biking, Skiing, Running,
 
     \item Systems and Tech Stack:
     	\begin{itemize}
-    		\item Micro-services for on-premises-hosted, bespoke tire-design CAD and web applications
+    		\item Microservices architecture for Bridgestone's tire-design CAD web application
     		\item Python 3, react.js, numpy, logging, pytest, mongoDB
     	\end{itemize}
 
     \item Projects and Work Contributed:
     	\begin{itemize}
-    		\item Designed and implemented a Dynamometer Dashboard for engine test data analysis at Ford Motors
+    		\item Designed and built a Dynamometer Dashboard for engine test data analysis at Ford Motors
     		\item Contributed to Bridgestone tire design CAD/analysis system written in Python 3 and React.js
 		\begin {itemize}
-			\item Microservices architecture hosted using on-premises resources
 			\item Added 'overlays' to the CAD system, allowing tire engineers to view a transparency of one tire design overlaid on to another
 			\item Refactored the automatic Excel report generation - tire engineers click a button in the CAD system and the Python back-end generates a downloadable report
     			\item Converted and upgraded FMAT, a tire image analysis tool, from MATLAB to Python 3 and introduced 'alpha-shapes' computational geometry technique to improve the 				boundary estimates of complex 2-D shapes
