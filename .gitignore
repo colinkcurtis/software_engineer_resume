@@ -1,0 +1,9 @@
+*.aux
+*.bcf
+*.log
+*.out
+*.pdf
+*.xml
+*.gz
+.DS_Store
+.idea/
