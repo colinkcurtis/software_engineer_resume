@@ -9,7 +9,7 @@
 %	to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 %	copies of the Software, and to permit persons to whom the Software is
 %	furnished to do so, subject to the following conditions:
-%	
+%
 %	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 %	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 %	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -17,7 +17,7 @@
 %	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 %	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 %	THE SOFTWARE.
-%	
+%
 %
 %-----------------------------------------------------------------------------------------------------------------------------------------------%
 
@@ -48,7 +48,7 @@
 %	PACKAGES
 %----------------------------------------------------------------------------------------
 \usepackage{url}
-\usepackage{parskip} 	
+\usepackage{parskip}
 
 %other packages for formatting
 \RequirePackage{color}
@@ -63,7 +63,7 @@
 \usepackage{enumitem}
 
 % centered version of 'X' col. type
-\newcolumntype{C}{>{\centering\arraybackslash}X} 
+\newcolumntype{C}{>{\centering\arraybackslash}X}
 
 %to prevent spillover of tabular into next pages
 \usepackage{supertabular}
@@ -72,11 +72,11 @@
 \setlength{\fullcollw}{0.47\textwidth}
 
 %custom \section
-\usepackage{titlesec}				
+\usepackage{titlesec}
 \usepackage{multicol}
 \usepackage{multirow}
 
-%CV Sections inspired by: 
+%CV Sections inspired by:
 %http://stefano.italians.nl/archives/26
 \titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
 \titlespacing{\section}{0pt}{10pt}{10pt}
@@ -117,7 +117,7 @@
 % \end{tabularx}
 
 \begin{tabularx}{\linewidth}{@{} C @{}}
-\Huge{Colin Curtis - Software and Data Engineer} \\[7.5pt]
+\Huge{Colin Curtis - Software, Data, and Machine Learning} \\[7.5pt]
 \href{https://github.com/colinkcurtis}{\raisebox{-0.05\height}\faGithub\ colinkcurtis} \ $|$ \
 \href{https://gitlab.com/colinkcurtis}{\raisebox{-0.05\height}\faGitlab\ colinkcurtis} \ $|$ \
 \href{https://www.linkedin.com/in/colinkcurtis/}{\raisebox{-0.05\height}\faLinkedin\ Colin Curtis} \ $|$ \
@@ -131,9 +131,12 @@
 
 %Interests/ Keywords/ Summary
 \section{Professional Summary}
-Software engineering is a complex and fast-moving profession where clear communication and team-work is as important as technical skill. My focus is in back-end, data-intensive systems with a dev-ops mindset. I am constantly looking for improved processes and effective automations.
+Software engineering is a complex and fast-moving profession where clear communication and
+team-work is as important as technical skill. I am constantly looking for improved processes
+and effective automations.
 
-Delivering great customer experience and value is the goal, and effective software with clean architecture which sticks to SOLID design principles is the vehicle for achieving that goal.
+Delivering great customer experience and value is the goal. Effective software with clean
+architecture is the vehicle for achieving that goal.
 
 
 %----------------------------------------------------------------------------------------
@@ -149,10 +152,10 @@ Delivering great customer experience and value is the goal, and effective softwa
 %----------------------------------------------------------------------------------------
 %	OTHER SKILLS & INTERESTS
 %----------------------------------------------------------------------------------------
-\section{Skills}
+\section{Other Skills and Interests}
 \begin{tabularx}{\linewidth}{@{}l X@{}}
-Other Skills: &  \normalsize{Linear Algebra, Calculus, Statistical Mechanics, Error/Uncertainty Analysis, Fractal Geo.}\\
-Interests:  &  \normalsize{Gardening, Cooking, Mountain Biking, Skiing, Running, Sci-fi, History}\\
+Professional: &  \normalsize{Statistics, Linear Algebra, Calculus, Error Analysis}\\
+Personal:  &  \normalsize{Gardening, Cooking, Mountain Biking, Skiing, Running, Sci-fi}\\
 \end{tabularx}
 
 
@@ -164,41 +167,55 @@ Interests:  &  \normalsize{Gardening, Cooking, Mountain Biking, Skiing, Running,
 %Experience
 \section{Work Experience}
 
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Senior Machine Learning Engineer - Fidelity} & \hfill April 2023 - Present \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+
+    \item Systems and Tech:
+    	\begin{itemize}
+    		\item Python 3, kubernetes, javascript, html, css
+    		\item python-msal, requests, beautiful soup
+    		\item Cloud Service Providers: AWS and Azure
+    	\end{itemize}
+
+    \item Projects and Responsibilities:
+    	\begin{itemize}
+    		\item Support platforms for rapid deployment of dockerized data science web-apps and apis
+			\item Designed and built a flask SSO layer for python web-app frameworks, reducing new-framework-onboarding time from weeks to days
+			\item System design and code review
+		\end{itemize}
+    \end{itemize}
+    \end{minipage}
+}
+\end{tabularx}
+
+
+
 \begin{tabularx}{\linewidth}{ @{}l r@{} }
 \textbf{Senior Software Engineer - Garner Health} & \hfill August 2022 - February 2023 \\[3.75pt]
 \multicolumn{2}{@{}X@{}}{
 \begin{minipage}[t]{\linewidth}
     \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
 
-        \item Systems and Tech Stack:
-        		\begin{itemize}
-        			\item Cloud-native, event-driven, microservices architecture
-        			\item Typical Layers: API, Daemon, Service, Model, Test
-			\item Python 3.11: connexion/flask, psycopg2, sqlalchemy, boto3, pytest, alembic, asyncio, behave
-			\item AWS: S3, RDS (postgres) ECR, EKR, Step Functions, Lambda, Transfer Family, Secrets Manager
-			\item Infrastructure-as-code: Docker, Kubernetes, Terraform
-			\item pair-programming with GPT-3 in the openAI playground
-   		\end{itemize}
+        \item Systems and Tech:
+			\begin{itemize}
+				\item Cloud-native, event-driven, microservices architecture
+				\item Python 3: connexion/flask, psycopg2, sqlalchemy, boto3, pytest, alembic, asyncio, behave
+				\item AWS: S3, RDS (postgres) ECR, EKR, Step Functions, Lambda, Transfer Family, Secrets Manager
+				\item Infrastructure-as-code: Docker, Kubernetes, Terraform
+   			\end{itemize}
 
-	\item Responsibilities:
+    	\item Projects and Responsibilities:
 		\begin{itemize}
-		    	\item Writing code for new features and bug fixes
-			\item Requirements gathering, feature planning, and project scheduling
-    			\item Code review
-			\item System design
-    			\item Dev-ops for the cloud-native system
-    			\item Support/on-call rotations
-		\end{itemize}
-
-    	\item Projects and Work Contributed:
-		\begin{itemize}
-    			\item PGP decryption module for the file ingestion system (AWS Step Functions kicked off by a Lambda fcn embedded in a microservices daemon which watched our S3 buckets)
-			\item Designed/implemented Client Data Configuration Versioning for transformation of ingested data
+    		\item PGP decryption module for the file ingestion system
+			\item Designed and implemented Client Data Configuration Versioning
 			\item SQL (sqlalchemy) query optimizations
-			\item System testing of RESTful APIs using Behavior Driven Design (behave library) 
-			\item Application of Linear Algebra principles to database design
-   			\item Extensively reviewed code for other engineers with a high acceptance rate for my revisions
-    			\item Contributed to Product Requirement Documents for engineering/management communications
+			\item System testing of RESTful APIs using Behavior Driven Design (behave library)
+   			\item Extensively reviewed code for other engineers
+    		\item Product Requirement Documents for engineering/management communications
 		\end{itemize}
 
 
@@ -208,18 +225,18 @@ Interests:  &  \normalsize{Gardening, Cooking, Mountain Biking, Skiing, Running,
 \end{tabularx}
 
 \begin{tabularx}{\linewidth}{ @{}l r@{} }
-\textbf{Software Engineer - Actalent Services} & \hfill April 2019 - August 2022 \\[3.75pt]
+\textbf{Software Engineer - Actalent Services} & \hfill April 2019 - July 2022 \\[3.75pt]
 \multicolumn{2}{@{}X@{}}{
 \begin{minipage}[t]{\linewidth}
     \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
 
-    \item Systems and Tech Stack:
+    \item Systems and Tech:
     	\begin{itemize}
     		\item Microservices architecture for Bridgestone's tire-design CAD web application
     		\item Python 3, react.js, numpy, logging, pytest, mongoDB
     	\end{itemize}
 
-    \item Projects and Work Contributed:
+    \item Projects and Responsibilities:
     	\begin{itemize}
     		\item Designed and built a Dynamometer Dashboard for engine test data analysis at Ford Motors
     		\item Contributed to Bridgestone tire design CAD/analysis system written in Python 3 and React.js
@@ -235,12 +252,12 @@ Interests:  &  \normalsize{Gardening, Cooking, Mountain Biking, Skiing, Running,
 \end{tabularx}
 
 \begin{tabularx}{\linewidth}{ @{}l r@{} }
-\textbf{Software Engineer - RENCI @ UNC - CH} & \hfill June 2018 - March 2019 \\[3.75pt]
+\textbf{Junior Software Engineer - Renassaince Computing Institute} & \hfill June 2018 - March 2019 \\[3.75pt]
 \multicolumn{2}{@{}X@{}}{
 \begin{minipage}[t]{\linewidth}
     \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
-    	\item NIH National Center for Advancing Translational Sciences (NCATS) - Biomedical Data Translator Project - Green Team
-    	\item Wrote, maintained, and deployed APIs to give access to bioinformatics data hosted in-house using Marathon, Mezos, Github, Jenkins, Docker, and nginx
+    	\item NIH National Center for Advancing Translational Sciences (NCATS) - Biomedical Data Translator Project
+    	\item Wrote and deployed APIs to give access to bioinformatics data hosted in-house using Marathon, Mezos, Github, Jenkins, Docker, and nginx
     	\item Jupyter notebooks used extensively to analyze and share data
     \end{itemize}
     \end{minipage}
@@ -248,7 +265,7 @@ Interests:  &  \normalsize{Gardening, Cooking, Mountain Biking, Skiing, Running,
 \end{tabularx}
 
 \begin{tabularx}{\linewidth}{ @{}l r@{} }
-\textbf{Research Assistant, Krim Group} & \hfill January 2015 - April 2018 \\[3.75pt]
+\textbf{Research Assistant, Krim and Clarke Groups} & \hfill January 2013 - April 2018 \\[3.75pt]
 \multicolumn{2}{@{}X@{}}{
 \begin{minipage}[t]{\linewidth}
     \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
@@ -257,26 +274,15 @@ Interests:  &  \normalsize{Gardening, Cooking, Mountain Biking, Skiing, Running,
 		\item Reduced user's active analysis time, per image, by a factor of \textasciitilde 50
 		\item Classification of 'fitting zones' (linear v. exponential) by $Adjusted-R^2$ comparison between multiple fitting attempts
 	\end{itemize}
+    	\item Research focus: Polymers, LASER for spectroscopy and photothermal heating, nanoparticle synthesis
+    	\item Utilized ANSYS Maxwell mesh-calculation to simulate 3-D electro-magnetic fields
+    	\item Used and maintained LabVIEW software systems for instrument control and data collection
     	\item Primary skills: equipment building, data capture, data analysis, and mathematical modeling
     	\item Subject-matter expertise: carbon nano-structures, inter-facial friction at the atomic scale
     \end{itemize}
     \end{minipage}
 }
 \end{tabularx}
-
-\begin{tabularx}{\linewidth}{ @{}l r@{} }
-\textbf{Research Assistant, Clarke Group} & \hfill January 2015 - April 2018 \\[3.75pt]
-\multicolumn{2}{@{}X@{}}{
-\begin{minipage}[t]{\linewidth}
-    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
-    	\item Research focus: Polymers, LASER for spectroscopy and photothermal heating, nanoparticle synthesis
-    	\item Utilized ANSYS Maxwell mesh-calculation to simulate 3-D electro-magnetic fields
-    	\item Used and maintained LabVIEW software systems for instrument control and data collection
-    \end{itemize}
-    \end{minipage}
-}
-\end{tabularx}
-
 
 %----------------------------------------------------------------------------------------
 %	PUBLICATIONS
