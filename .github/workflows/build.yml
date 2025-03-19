@@ -1,5 +1,4 @@
 # With some help from: https://gist.github.com/dgerosa/2e1f47a39180f39bde848e38243efa94
-
 name: build
 on: [push]
 jobs:
@@ -20,7 +19,7 @@ jobs:
       - name: move
         run: mkdir -p github_artifacts && mv ${{ env.DIR }}/${{ env.FILE }}.pdf ./github_artifacts/
       - name: Upload pdf as artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: ${{ env.FILE }}.pdf
           path: ./github_artifacts
@@ -30,7 +29,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - uses: actions/download-artifact@v3
+      - uses: actions/download-artifact@v4
         with:
           path: github_artifacts
       - name: move
