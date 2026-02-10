@@ -182,29 +182,35 @@ and a focus on cost-effective practices are the vehicle.
 
 
 \begin{tabularx}{\linewidth}{ @{}l r@{} }
-\textbf{Senior Machine Learning Ops and Software Engineer - Fidelity Investments} & \hfill April 2023 - Present \\[3.75pt]
+\textbf{Machine Learning Ops and Software Engineering - Fidelity Investments} & \hfill April 2023 - Present \\[3.75pt]
 \multicolumn{2}{@{}X@{}}{
 \begin{minipage}[t]{\linewidth}
     \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
 
-	\item Data Science Platform and MLOps Chapter, AI/ML Solutions Engineering Squad
+	\item Enterprise Data and AI (EDAI), AI/ML Solutions Engineering Squad
 
     \item Cloud Systems and Tech Stack:
     	\begin{itemize}
     		\item AWS: Sagemaker, Cloudwatch, ECR, S3, Bedrock, RDS, EKS, IAM, Cost Explorer
     		\item Azure: OpenAI (OAI) portal + Tofu (Terraform) for model deployment/management
-    		\item python 3: botocore, flask, fastapi, pydantic, openai, streamlit, pandas, numpy, sqlalchemy
+    		\item python 3: botocore, flask, fastapi, pydantic, openai, streamlit, pandas, numpy, sqlalchemy, etc.
 			\item Docker, kubernetes, Splunk, Argo, Jenkins, Snowflake, Datadog, jupyter NB
     	\end{itemize}
 
     \item Projects and Responsibilities:
     	\begin{itemize}
-			\item Wrote signing and composition logic for pure HTTP requests to be used throughout our codebases
-				in order to factor out CSP SDKs (boto3, etc.) that had begun to bog down our systems, reducing dependency-complexity
 			\item Implemented enterprise-grade JWT authentication system to enhance platform
 				security, enabling identity management and request attribution for data science
 				workflows; enables fine-grained access control and audit capabilities
 				while maintaining compatibility with existing OAuth2-token authentication flows
+			\item Modularized MLOps model server build pipeline (Triton, DJL, custom) using Docker 
+				multi-stage builds and containerization best practices, enabling CI/CD efficiency 
+				and faster developer velocity by isolating build layers based on user requirements
+			\item Implemented automated E2E testing and validation for model building pipeline 
+				to ensure consistent delivery, accelerate bug detection, and improve deployment 
+				reliability across ML infrastructure
+			\item Wrote signing and composition logic for pure HTTP requests to be used throughout our codebases
+				in order to factor out CSP SDKs (boto3, etc.) that had begun to bog down our systems with dependency-complexity
 			\item Re-worked automation code (Jenkins) for integration and performance tests
 				on our primary customer-facing application, GenAI Gateway; upgraded the test-runners
 				to run on a weekly schedule in addition to manual usage; modified the test
@@ -303,7 +309,7 @@ and a focus on cost-effective practices are the vehicle.
 	\end{itemize}
     	\item ANSYS Maxwell mesh-calculation to simulate 3-D electromagnetic fields
     	\item LabVIEW software systems for instrument control and data collection
-		\item Author/co-author of 3 peer-reviewed papers in experimental physics
+		\item Author/co-author of 3 peer-reviewed papers in experimental surface physics
 	\end{itemize}
     \end{minipage}
 }
