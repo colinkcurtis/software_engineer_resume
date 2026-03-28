@@ -156,6 +156,7 @@ and a focus on cost-effective practices are the vehicle.
     	\begin{itemize}
     		\item C4 software system design
     		\item SOLID, YAGNI, DRY coding principles
+			\item AI pair programming
     		\item ICE product/feature design
     		\item Linear Algebra, Calculus, Statistics, Error Analysis
     	\end{itemize}
@@ -191,14 +192,20 @@ and a focus on cost-effective practices are the vehicle.
 
     \item Cloud Systems and Tech Stack:
     	\begin{itemize}
-    		\item AWS: Sagemaker, Cloudwatch, ECR, S3, Bedrock, RDS, EKS, IAM, Cost Explorer
-    		\item Azure: OpenAI (OAI) portal + Tofu (Terraform) for model deployment/management
+    		\item AWS: Bedrock, Sagemaker, Cloudwatch, ECR, S3, RDS, EKS, IAM, Cost Explorer, etc.
+    		\item Azure: OpenAI (OAI) portal + OpenTofu (Terraform) model deployment/management
     		\item python 3: botocore, flask, fastapi, pydantic, openai, streamlit, pandas, numpy, sqlalchemy, etc.
-			\item Docker, kubernetes, Splunk, Argo, Jenkins, Snowflake, Datadog, jupyter NB
+			\item DevOps: Docker, kubernetes, Splunk, Argo, Jenkins, Snowflake, Datadog, jupyter NB, OpenTelemetry
     	\end{itemize}
 
     \item Projects and Responsibilities:
     	\begin{itemize}
+			\item Designed and implemented an end-to-end automated testing pipeline for ML model 
+				deployment on AWS SageMaker, orchestrating parallel build/deploy/test/destroy 
+				workflows across multiple model server frameworks (Flask, DJL, Triton) via Jenkins. 
+				Diagnosed and resolved GPU/CUDA compatibility issues across the container and infrastructure 
+				stack, including NVIDIA driver version mismatches and SageMaker AMI configuration. Integrated 
+				Bruno CLI for API contract testing with automated failure reporting and notification.
 			\item Implemented enterprise-grade JWT authentication system to enhance platform
 				security, enabling identity management and request attribution for data science
 				workflows; enables fine-grained access control and audit capabilities
