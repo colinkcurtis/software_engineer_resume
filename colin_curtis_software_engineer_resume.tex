@@ -133,6 +133,8 @@ communication is as important as technical skill. Delivering great customer expe
 is the goal. In order to consistently reach that goal, cleanly-architectured systems
 and a focus on cost-effective practices are the vehicle.
 
+Currently a core contributor to the centralized LLM platform at a Fortune 100 financial services firm,
+my team's infrastructure serves 10,000+ users, hundreds of data scientists, and thousands of engineers.
 %----------------------------------------------------------------------------------------
 %	EDUCATION
 %----------------------------------------------------------------------------------------
@@ -157,7 +159,6 @@ and a focus on cost-effective practices are the vehicle.
     		\item C4 software system design
     		\item SOLID, YAGNI, DRY coding principles
 			\item AI pair programming
-    		\item ICE product/feature design
     		\item Linear Algebra, Calculus, Statistics, Error Analysis
     	\end{itemize}
 
@@ -195,40 +196,21 @@ and a focus on cost-effective practices are the vehicle.
     		\item AWS: Bedrock, Sagemaker, Cloudwatch, ECR, S3, RDS, EKS, IAM, Cost Explorer, etc.
     		\item Azure: OpenAI (OAI) portal + OpenTofu (Terraform) model deployment/management
     		\item python 3: botocore, flask, fastapi, pydantic, openai, streamlit, pandas, numpy, sqlalchemy, etc.
-			\item DevOps: Docker, kubernetes, Splunk, Argo, Jenkins, Snowflake, Datadog, jupyter NB, OpenTelemetry
+			\item DevOps: Docker, kubernetes, Splunk, Argo, Jenkins, Snowflake, Datadog, jupyter NB, OpenTelemetry, Bruno
     	\end{itemize}
 
     \item Projects and Responsibilities:
     	\begin{itemize}
-			\item Designed and implemented an end-to-end automated testing pipeline for ML model 
-				deployment on AWS SageMaker, orchestrating parallel build/deploy/test/destroy 
-				workflows across multiple model server frameworks (Flask, DJL, Triton) via Jenkins. 
-				Diagnosed and resolved GPU/CUDA compatibility issues across the container and infrastructure 
-				stack, including NVIDIA driver version mismatches and SageMaker AMI configuration. Integrated 
-				Bruno CLI for API contract testing with automated failure reporting and notification.
-			\item Implemented enterprise-grade JWT authentication system to enhance platform
-				security, enabling identity management and request attribution for data science
-				workflows; enables fine-grained access control and audit capabilities
-				while maintaining compatibility with existing OAuth2-token authentication flows
-			\item Modularized MLOps model server build pipeline (Triton, DJL, custom) using Docker 
-				multi-stage builds and containerization best practices, enabling CI/CD efficiency 
-				and faster developer velocity by isolating build layers based on user requirements
-			\item Wrote signing and composition logic for pure HTTP requests to be used throughout our codebases
-				in order to factor out CSP SDKs (boto3, etc.) that had begun to bog down our systems with dependency-complexity
-			\item Re-worked automation code (Jenkins) for integration and performance tests
-				on our primary customer-facing application, GenAI Gateway; upgraded the test-runners
-				to run on a weekly schedule in addition to manual usage; modified the test
-				suites to upgrade lower-env deployed applications
-				to their latest version(s) before launching tests against them
-			\item ML-training/inference cost-savings initiative, five-figure monthly savings outcome
-			\item SSO-authentication flask wrapper to secure data science web apps
-    		\item Tested deployed models for LLM token-usage and response-time metrics
-			\item Extensive code review and deployment support for engineers and data scientists across teams
-			\item Handled database migrations, surgery and any other troubleshooting/fixing that needs doing
-			\item Defined and added new pieces of work to the JIRA ticket queue
-			\item Onboarded GenAI-Gateway to Fidelity's Enterprise-wide API platform, including careful documentation
-				for team-internal as well as customer usage
-			\item Anticipate the needs of, and potential issues within, our code and tooling before they arise
+			\item Lead reviewer across squad's primary repositories for 3 years (the 2 repos representing 90\% of team work), ranking \#1 or \#2 in review volume, code suggestions, and discussion depth across 10+ GitHub activity metrics - patterns established through review have become the squad's de facto engineering standards
+			\item Mentor engineers from junior through principal level across the squad and increasingly pulled into adjacent squads for expertise in MLOps, IaC, and LLM infrastructure
+			\item Onboarded GenAI Gateway to Fidelity's enterprise-wide API platform as one of only 8 core contributors, enabling secure LLM access for an eventual 10,000+ users; authored documentation supporting both internal teams and external consumers
+			\item Drove ML training/inference cost-savings initiative delivering five-figure monthly savings by implementing processes to detect and eliminate stagnant SageMaker deployments
+			\item Designed and shipped end-to-end automated testing pipeline for ML model deployment on AWS SageMaker, orchestrating parallel build/deploy/test/destroy workflows across Flask, DJL, and Triton model servers via Jenkins; supports hundreds of actively deployed models and up to 100 deployments per day. Resolved deep GPU/CUDA compatibility issues spanning NVIDIA drivers and SageMaker AMI configuration
+			\item Modularized MLOps model server build pipeline (Triton, DJL, custom) using Docker multi-stage builds, cutting repeat-build times by 10-60\% per job and accelerating developer velocity for \textasciitilde150 engineers consuming the pipeline
+			\item Shipped enterprise JWT authentication enabling per-user identity, request attribution, and fine-grained access control for data science workflows, while maintaining backward compatibility with existing OAuth2 flows; serves 1,000+ client integrations and growing steadily
+			\item Own Infrastructure-as-Code (OpenTofu/Terraform) for AWS Bedrock and Azure OpenAI deployments, managing dozens of customer accounts containing dozens of model deployments each, this system is onboarding \textasciitilde2-3 new accounts per week and accelerating
+			\item Eliminated heavyweight CSP SDK dependencies (boto3, etc.) from core codebases by implementing pure HTTP request signing and composition logic, reducing dependency footprint and resolving cascading version conflicts that had bogged down build and runtime performance
+			\item Rebuilt Jenkins automation for GenAI Gateway integration and performance tests; added weekly scheduled runs alongside manual execution and extended suites to auto-upgrade lower-environment deployments to latest versions before testing --- catching regressions earlier with no manual intervention
 		\end{itemize}
     \end{itemize}
     \end{minipage}
