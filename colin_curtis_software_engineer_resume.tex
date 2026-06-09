@@ -175,6 +175,43 @@ my team's infrastructure serves 10,000+ users, hundreds of data scientists, and 
 \end{tabularx}
 
 
+
+%----------------------------------------------------------------------------------------
+% APPLIED AI ENGINEERING - INDEPENDENT WORK
+%----------------------------------------------------------------------------------------
+
+\section{Applied AI Engineering --- Independent Work}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Independent Study} & \hfill 2026 -- Present \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt, label=--]
+        \item Agentic systems architecture: tool-use loops, multi-agent orchestration, human-in-the-loop patterns (sync gate, draft-queue, risk-tiered routing) and agent isolation via tool-router enforcement (IAM analogue)
+        \item RAG architecture: chunking strategies, embedding model consistency, vector store selection and tradeoffs (ChromaDB, pgvector, Pinecone), retrieval failure modes (corpus gap vs.\ query-form mismatch)
+        \item Eval frameworks: heuristic gates, LLM-as-judge, RAGAS-style metrics (Precision@k, Recall@k, Faithfulness, Answer Relevancy) and golden test sets
+        \item MCP server/client architecture, tool/resource/prompt primitives, team-wide tooling via \texttt{.mcp.json} and context-bloat management via the router pattern (N tools $\to$ 1 interface)
+        \item Cost optimization: prompt caching, model tiering (Haiku/Sonnet/Opus by task complexity), batch processing, token budget design, and the naive RAG vs.\ tool-use cost/quality tradeoff with real token-cost math
+    \end{itemize}
+    \end{minipage}
+}
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Applied Project: B2B SaaS Churn Prevention System} & \hfill 2026 \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt, label=--]
+        \item Designed end-to-end churn prediction system: time-boxed label definition (prediction window leads the renewal event), feature engineering across support, billing, and call data with explicit handling of NULL semantics, class imbalance (\textasciitilde5\% positives after proper framing), and post-cutoff data leakage, wrote the full feature-extraction SQL from scratch
+        \item Built a three-tier risk classifier (green/yellow/red) driving a RAG-backed agentic email system; retrieval grounds outreach in account-specific facts drawn from the CS playbook and interaction history
+        \item Designed multi-layer eval framework: heuristic gates (block financial commitments, enforce 1:1 fact matching), LLM-as-judge (tone, grounding, content scope), and hand-crafted golden evals authored with domain experts; defined ``false claim rate'' as the primary production metric
+        \item Diagnosed two independent production incidents from monitoring data alone: a feature feed failure (null rate stepping from 3\% to 55\%) and a silent LLM model swap; proposed remediation including emit-no-score-on-degraded-data, version pinning, and eval-gated model promotion
+        \item Proposed treatment/control groups experimental design on at-risk accounts to measure statistically significant retention impact --- named this as the only rigorous way to know whether the system actually works
+    \end{itemize}
+    \end{minipage}
+}
+\end{tabularx}
+
 %----------------------------------------------------------------------------------------
 % WORK EXPERIENCE
 %----------------------------------------------------------------------------------------
@@ -212,6 +249,7 @@ my team's infrastructure serves 10,000+ users, hundreds of data scientists, and 
 			\item Own Infrastructure-as-Code (OpenTofu/Terraform) for AWS Bedrock and Azure OpenAI deployments, managing dozens of customer accounts containing dozens of model deployments each, this system is onboarding \textasciitilde2-3 new accounts per week and accelerating
 			\item Eliminated heavyweight CSP SDK dependencies (boto3, etc.) from core codebases by implementing pure HTTP request signing and composition logic, reducing dependency footprint and resolving cascading version conflicts that had bogged down build and runtime performance
 			\item Rebuilt Jenkins automation for GenAI Gateway integration and performance tests; added weekly scheduled runs alongside manual execution and extended suites to auto-upgrade lower-environment deployments to latest versions before testing --- catching regressions earlier with no manual intervention
+			\item Founding collaborator on an agentic AI coding CLI --- analogous to Claude Code --- that performs repo-scouting, generates plans, and applies in-IDE edits by routing through the GenAI Gateway; served as primary technical advisor to the data-scientist stakeholder on Gateway capabilities and constraints, and drove sustained feature ideation, usability feedback, and testing contributions across the tool's multi-year development
 		\end{itemize}
     \end{itemize}
     \end{minipage}
